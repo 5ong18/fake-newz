@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Slider from 'react-slick';
+
 import shuffleArray from '../../functions';
 
 const settings = {
