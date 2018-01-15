@@ -29,3 +29,38 @@ export function latestGallery () {
         payload: request
     }
 }
+
+
+export function selectedNews (id) {
+    const request = fetch(`${URL}/articles?id=${id}`, {method: 'GET'})
+                    .then(response => response.json())
+
+    return {
+        type: 'GET_SELECTED_NEWS',
+        payload: request
+    }
+}
+
+export function clearSelectedNews (id) {
+    return {
+        type: 'CLEAR_SELECTED_NEWS',
+        payload: []
+    }
+}
+
+export function selectedGallery (id) {
+    const request = fetch(`${URL}/galleries?id=${id}`, {method: 'GET'})
+                    .then(response => response.json())
+
+    return {
+        type: 'GET_SELECTED_GALLERY',
+        payload: request
+    }
+}
+
+export function clearSelectedGallery (id) {
+    return {
+        type: 'CLEAR_SELECTED_GALLERY',
+        payload: []
+    }
+}

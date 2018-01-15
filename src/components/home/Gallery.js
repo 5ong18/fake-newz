@@ -5,11 +5,18 @@ import Slider from 'react-slick';
 import shuffleArray from '../../functions';
 
 const settings = {
+    autoplay: true,
+    autoplaySpeed: 4500,
+    arrows: true,
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    pauseOnHover: false,
+    slidesToScroll: 1,
+    speed: 3000,
+    swipe: true,
+    swipeToSlide: true,
+    fade: false
+    /* slidesToShow: 1, */
 }
 
 const showGallery = ({latestGallery}) => {
