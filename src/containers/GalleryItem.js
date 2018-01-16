@@ -4,6 +4,9 @@ import { selectedGallery, clearSelectedGallery } from '../actions';
 import { bindActionCreators } from 'redux';
 import Slider from 'react-slick/lib/slider';
 
+// likes counter
+import Counter from './LikesCounter';
+
 const settings = {
     autoplay: true,
     autoplaySpeed: 4500,
@@ -50,6 +53,9 @@ class GalleryItem extends Component {
                             )
                         })}
                     </Slider>
+                    <div>
+                        <Counter section="galleries" type="HANDLE_LIKES_GALLERY" galleryId={gallery.id} likes={gallery.likes[0]} dislikes={gallery.likes[1]}/>
+                    </div>
                 </div>
             )
         }

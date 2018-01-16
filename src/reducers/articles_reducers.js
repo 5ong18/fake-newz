@@ -20,6 +20,12 @@ export default function (state={}, action) {
                 ...state,
                 selected: action.payload
             }
+        case 'HANDLE_LIKES_ARTICLE':
+            // console.log(action.payload)
+            return {
+                ...state,
+                selected: action.payload
+            }
         default:
             return state
     }
